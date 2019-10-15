@@ -12,7 +12,7 @@
     <main>
         <header>
                 <h1>PerformanceSearch</h1>
-                <p>Enter a search term for a composer or work.  PerformanceSearch will simultaneously search YouTube and Apple Music for your search term!</p>
+                <p>Enter a search term for a composer or work.  PerformanceSearch will simultaneously search YouTube and Discogs for your search term!</p>
         </header>
         <form>
             <input type="text" id="searchTerm">
@@ -25,13 +25,16 @@
                     <ul class="youtube-results"></ul>
                     <input type="button" value="Get more results" id="more-youtube-results">
             </div>
-            <div class="appleMusic">
-                    <h3>Apple Music</h3>
+            <div class="discogs">
+                    <h3>Discogs</h3>
+                    <ul class="discogs-results"></ul>
+                    <input type="button" value="Get more results" id="more-discogs-results">
                 </div>
         </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://apis.google.com/js/api.js"></script>
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
+    <script src="discogs.js"></script>
 </body>
 </html>

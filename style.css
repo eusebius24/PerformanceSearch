@@ -15,6 +15,6 @@ main {
     display: none;
 }
 
-.youtube-results {
+.youtube-results, .discogs-results {
     list-style-type: none;
 }
