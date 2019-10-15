@@ -14,3 +14,7 @@ main {
 .hidden {
     display: none;
 }
+
+.youtube-results {
+    list-style-type: none;
+}
