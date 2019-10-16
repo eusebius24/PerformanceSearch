@@ -20,7 +20,7 @@ function watchForm() {
 function getSearchResults(term) {
     var termArray = term.split(' ');
     var newTerm = termArray.join('%20');
-    var url = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=10&q='" + newTerm + "'&key=" + youtubeAPIKey;
+    var url = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=50&q='" + newTerm + "'&key=" + youtubeAPIKey;
     console.log(url);
     fetch(url)
         .then(response => {
@@ -57,7 +57,7 @@ function getMoreYouTubeResults(responseJson) {
         var searchTerm = $('#searchTerm').val();
         var termArray = searchTerm.split(' ');
         var newTerm = termArray.join('%20');
-        var moreResultsUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=10&q=${newTerm}&key=${youtubeAPIKey}&pageToken=${responseJson.nextPageToken}`;
+        var moreResultsUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=10&q=${newTerm}&key=${youtubeAPIKey}&maxResults=50&pageToken=${responseJson.nextPageToken}`;
         
         fetch(moreResultsUrl)
         .then(response => {
