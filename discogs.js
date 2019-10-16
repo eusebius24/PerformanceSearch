@@ -3,27 +3,24 @@ var discogsKey = "oNASBTCCcfjmebWyGlCQ";
 var discogsSecret = "HmuMYvJaeMDCZgRgZKtiultyUClxXtCH"
 var pageNumber = 1;
 
-function watchForm() {
-    $('form').submit(event => {
-        event.preventDefault();
-        $('.discogs-results').empty();
-        console.log('you clicked the search button!');
-        var searchTerm = $('#searchTerm').val();
-        console.log(searchTerm);
-        // var searchWords = [];
-        // searchWords = searchTerm.split(' ');
-        // var regexFromSearchWords = new RegExp(searchWords.join("|", "gi"));
-        // console.log(regexFromSearchWords);
-        getSearchResults(searchTerm);
-    $('#clearSearch').on('click', function() {
-        event.preventDefault();
-        $('#searchTerm').val('');
-    });
+// function watchForm() {
+//     $('form').submit(event => {
+//         event.preventDefault();
+//         $('.discogs-results').empty();
+//         console.log('you clicked the search button!');
+//         var searchTerm = $('#searchTerm').val();
+//         console.log(searchTerm);
+//         // var searchWords = [];
+//         // searchWords = searchTerm.split(' ');
+//         // var regexFromSearchWords = new RegExp(searchWords.join("|", "gi"));
+//         // console.log(regexFromSearchWords);
+//         getDiscogSearchResults(searchTerm);
+//     });
     
-    });
-}
+//     });
+// }
 
-function getSearchResults(term) {
+function getDiscogSearchResults(term) {
     var termArray = term.split(' ');
     var newTerm = termArray.join('%20');
     var url = "https://cors-anywhere.herokuapp.com/https://api.discogs.com/database/search?q='" + newTerm + "'&key=" + discogsKey + "&secret=" + discogsSecret + "&perpage=100";
@@ -36,7 +33,7 @@ function getSearchResults(term) {
         throw new Error(response.statusText);
         })
         // .then(responseJson => console.log(responseJson))
-        .then(responseJson => displayResults(responseJson))  
+        .then(responseJson => displayDiscogsResults(responseJson))  
         .catch(err => {
         $('#js-error-message').text(`Something went wrong: ${err.message}`);
         })
@@ -45,7 +42,7 @@ function getSearchResults(term) {
    
 }
 
-function displayResults(responseJson) {
+function displayDiscogsResults(responseJson) {
     for (var i in responseJson.results) {
     console.log(responseJson.results[i].title);
     $('.discogs-results').append(`<li><img src='${responseJson.results[i].thumb}'><br><a href='https://www.discogs.com/${responseJson.results[i].uri}' target='_blank'>${responseJson.results[i].title}</a></li>`);
@@ -72,7 +69,7 @@ function displayResults(responseJson) {
             })
             // .then(responseJson => console.log(responseJson))
             
-            .then(responseJson => displayResults(responseJson))
+            .then(responseJson => displayDiscogsResults(responseJson))
             .catch(err => {
             $('#js-error-message').text(`Something went wrong: ${err.message}`);
             })
