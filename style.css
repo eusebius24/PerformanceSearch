@@ -15,6 +15,11 @@ main {
     display: none;
 }
 
+.result-boxes {
+    display: flex;
+}
+
 .youtube-results, .discogs-results {
     list-style-type: none;
+    width: 50%;
 }
