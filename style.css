@@ -3,14 +3,67 @@
 }
 
 body {
-    font-family: Roboto, sans-serif;
+    font-family: Montserrat, sans-serif;
+    line-height: 1.2em;
+    background-color: #BCBF80;
 }
 
 main {
     width: 75%;
+    height: 5000vh;
     margin: 0 auto;
+    background-color:#F2EFD8 ;
 }
 
+#formwrapper {
+    height: 150px;
+}
+form {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+#searchTerm {
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+    margin-left: -30px;
+}
+
+#search, #clearSearch, #more-youtube-results, #more-discogs-results {
+    width: 170px;
+    height: 50px;
+    background-color: #909A56;
+    color: #fff;
+    border-radius: 5%;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-family: Montserrat, sans-serif;
+}
+
+#search:hover, #clearSearch:hover, #more-youtube-results:hover, #more-discogs-results:hover {
+    background-color: #8C2A14;
+    cursor: pointer;
+}
+
+header {
+    background-color: #A50321;
+    color: #F2EFD8;
+    padding: 20px;
+    width: 110%;
+    margin-left: -20px;
+    padding-left: 50px;
+    margin-top: -20px;
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+   
+}
+h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #A50321;
+}
 .hidden {
     display: none;
 }
@@ -19,7 +72,66 @@ main {
     display: flex;
 }
 
+.YouTube, .discogs {
+    width: 70%;
+    margin: 0 auto;
+}
+
 .youtube-results, .discogs-results {
     list-style-type: none;
-    width: 50%;
+    margin-left: -32px;
 }
+
+.youtube-results li, .discogs-results li {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1115px) {
+    #search, #clearSearch {
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    #searchTerm {
+        margin-bottom: 10px;
+    }
+    #search, #clearSearch {
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .YouTube {
+        width: 90%;
+        margin: 0 auto;
+
+    }
+
+
+    .discogs {
+        width: 90%;
+        margin: 0 auto;
+       
+    }
+    .youtube-results, .discogs-results {
+        list-style-type: none;
+        margin-left: -70px;
+        text-align: left;
+    }  
+}
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+    
+    #searchTerm {
+        margin: 0 auto;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    
+    #search {
+        margin-left: 50px;
+    }

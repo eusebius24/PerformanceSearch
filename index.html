@@ -5,38 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ScoreSearch</title>
+    <link rel="stylesheet" href="jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display:900i&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
         <header>
                 <h1>PerformanceSearch</h1>
                 <p>Enter a search term for a composer or work.  PerformanceSearch will simultaneously search YouTube and Discogs for your search term!</p>
         </header>
-        <form>
-            <input type="text" id="searchTerm">
-            <input type="submit" value="Search!">
-            <input type="button" id="clearSearch" value="Clear search box">
-        </form>
-        <section class="results hidden">
-            <h2>Search Results</h2>
-            <div class="result-boxes">
-                <div class="YouTube">
-                        <h3>YouTube</h3>
-                        <ul class="youtube-results"></ul>
-                        <input type="button" value="Get more results" id="more-youtube-results">
-                </div>
-                <div class="discogs">
-                        <h3>Discogs</h3>
-                        <ul class="discogs-results"></ul>
-                        <input type="button" value="Get more results" id="more-discogs-results">
-                        <p id="js-error-message"></p>
+    <main>
+        <div id="formwrapper">
+             <form>
+                <input type="text" id="searchTerm">
+                <input type="submit" id="search" value="Search!">
+                <input type="button" id="clearSearch" value="Clear search box">
+            </form>
+        </div>
+        <div id="tabs">
+            <ul>
+              <li><a href="#fragment-1">YouTube</a></li>
+              <li><a href="#fragment-2">Discogs</a></li>
+             
+            </ul>
+            <div id="fragment-1">
+                <div class="result-boxes">
+                    <div class="YouTube hidden">
+                            <h3>YouTube Search Results</h3>
+                            <ul class="youtube-results"></ul>
+                            <input type="button" value="Get more results" id="more-youtube-results">
                     </div>
+                </div>
             </div>
-        </section>
+            <div id="fragment-2">
+                <div class="discogs hidden">
+                    <h3>Discogs Search Results</h3>
+                    <ul class="discogs-results"></ul>
+                    <input type="button" value="Get more results" id="more-discogs-results">
+                    <p id="js-error-message"></p>
+                </div>
+            </div>
+          </div>
+        
+       
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="jquery-ui.min.js"></script>
     <script src="https://apis.google.com/js/api.js"></script>
     <!-- <script src="index.js"></script> -->
     <script src="index1.js"></script>

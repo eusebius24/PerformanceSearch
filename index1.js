@@ -45,7 +45,8 @@ function getYouTubeSearchResults(term) {
         $('#js-error-message').text(`Something went wrong: ${err.message}`);
         })
 
-    $('.results').removeClass('hidden');
+    $('.YouTube').removeClass('hidden');
+    $('.discogs').removeClass('hidden');
 }
 
 function displayYouTubeResults(responseJson) {
@@ -136,6 +137,10 @@ function getMoreDiscogsResults(responseJson) {
         })
 
 }
+
+$( function() {
+    $( "#tabs" ).tabs();
+  } );
 
 $(function() {
     console.log('App loaded! Waiting for submit!');
