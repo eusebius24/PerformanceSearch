@@ -94,7 +94,7 @@ h2, h3 {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 915px) {
 
     #searchTerm {
         margin-bottom: 10px;
@@ -135,3 +135,11 @@ h2, h3 {
     #search {
         margin-left: 50px;
     }
+
+@media screen and (max-width: 600px) {
+    #search, #clearSearch {
+        width: 50px;
+        height: 10px;
+        font-size: 8px;
+    }
+}
