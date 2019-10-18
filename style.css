@@ -21,7 +21,7 @@ main {
 form {
     width: 70%;
     margin: 0 auto;
-    padding-top: 60px;
+    /* padding-top: 60px; */
 }
 
 #searchTerm {
@@ -29,6 +29,7 @@ form {
     width: 250px;
     border-radius: 5px;
     margin-left: -30px;
+    margin-top: 20px;
 }
 
 #search, #clearSearch, #more-youtube-results, #more-discogs-results {
@@ -50,7 +51,7 @@ form {
 header {
     background-color: #A50321;
     color: #F2EFD8;
-    padding: 20px;
+    padding: 30px;
     width: 110%;
     margin-left: -20px;
     padding-left: 50px;
@@ -92,16 +93,18 @@ h2, h3 {
         height: 40px;
         font-size: 12px;
     }
-}
 
+    
 @media screen and (max-width: 915px) {
 
     #searchTerm {
         margin-bottom: 10px;
+        margin-top: 30px;
+        margin-left: -50px;
     }
     #search, #clearSearch {
         width: 100px;
-        height: 30px;
+        
         font-size: 10px;
     }
 
@@ -128,18 +131,45 @@ h2, h3 {
     
     #searchTerm {
         margin: 0 auto;
-        margin-left: 20px;
+        margin-left: 50px;
         margin-bottom: 10px;
+        margin-top: 40px;
+    }
+
+    .ui-widget {
+        margin-top: 40px;
     }
     
     #search {
         margin-left: 50px;
     }
+}
 
 @media screen and (max-width: 600px) {
     #search, #clearSearch {
-        width: 50px;
+        width: 10px;
         height: 10px;
-        font-size: 8px;
+        font-size: 6px;
+        margin-left: 50px;
+    }
+    #formwrapper {
+        padding-left: 300px;
+    }
+    #searchTerm {
+        margin-left: -50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    form {
+       padding-top: -60px;
+    }
+
+    #search, #clearSearch {
+        margin-left: 50px;
+    }
+
+    .ui-widget {
+        margin-top: 100px;
     }
 }
