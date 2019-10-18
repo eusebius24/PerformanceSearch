@@ -12,14 +12,16 @@ main {
     width: 75%;
     height: 5000vh;
     margin: 0 auto;
-    background-color:#F2EFD8 ;
+    margin-left: 50px;
+    background-color:#F2EFD8;
 }
 
 #formwrapper {
     height: 150px;
 }
+
 form {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     /* padding-top: 60px; */
 }
@@ -28,17 +30,23 @@ form {
     height: 30px;
     width: 250px;
     border-radius: 5px;
-    margin-left: -30px;
+    margin-left: -45px;
     margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin-bottom: 40px;
 }
 
 #search, #clearSearch, #more-youtube-results, #more-discogs-results {
-    width: 170px;
-    height: 50px;
+    width: 120px;
+    height: 40px;
     background-color: #909A56;
     color: #fff;
     border-radius: 5%;
-    font-size: 14px;
+    font-size: 12px;
+    margin: 0 quto;
     margin-bottom: 20px;
     font-family: Montserrat, sans-serif;
 }
@@ -48,29 +56,35 @@ form {
     cursor: pointer;
 }
 
+#search, #clearSearch {
+    margin-left: 30px;
+}
+
 header {
     background-color: #A50321;
     color: #F2EFD8;
-    padding: 30px;
+    padding: 60px;
+    padding-bottom: 40px;
     width: 110%;
     margin-left: -20px;
-    padding-left: 50px;
+    /* padding-left: 50px; */
     margin-top: -20px;
 }
 h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
    
 }
 h2, h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     color: #A50321;
 }
 .hidden {
     display: none;
 }
 
-.result-boxes {
-    display: flex;
+.ui-widget {
+    margin-top: 40px;
 }
 
 .YouTube, .discogs {
@@ -80,14 +94,30 @@ h2, h3 {
 
 .youtube-results, .discogs-results {
     list-style-type: none;
-    margin-left: -32px;
+    margin-left: -82px;
 }
 
 .youtube-results li, .discogs-results li {
     margin-bottom: 10px;
 }
 
-@media screen and (max-width: 1115px) {
+.results-img {
+    width: 70%;
+    margin: 0 auto;
+}
+@media screen and (min-width: 400px) {
+    main {
+        margin-left: 50px;
+    }
+    form {
+        width: 70%;
+        margin-left: 70px;
+    }
+    #searchTerm {
+        margin-left: -25px;
+    }
+}
+/* @media screen and (max-width: 1115px) {
     #search, #clearSearch {
         width: 120px;
         height: 40px;
@@ -125,9 +155,9 @@ h2, h3 {
         margin-left: -70px;
         text-align: left;
     }  
-}
+} */
 
-@media screen and (max-width: 800px) and (min-width: 600px) {
+/* @media screen and (max-width: 800px) and (min-width: 600px) {
     
     #searchTerm {
         margin: 0 auto;
@@ -165,11 +195,23 @@ h2, h3 {
        padding-top: -60px;
     }
 
-    #search, #clearSearch {
-        margin-left: 50px;
-    }
+   #searchTerm {
+       margin-left: -300px;
+   }
 
+   #search, #clearSearch {
+       
+       width: 60px;
+       height: 20px;
+   }
+#search {
+    margin-left: -150px;
+   
+}
+#clearSearch {
+    margin-left: -200px;
+}
     .ui-widget {
         margin-top: 100px;
     }
-}
+} */

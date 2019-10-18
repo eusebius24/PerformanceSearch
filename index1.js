@@ -52,7 +52,8 @@ function getYouTubeSearchResults(term) {
 function displayYouTubeResults(responseJson) {
     for (var i in responseJson.items) {
     console.log(responseJson.items[i].snippet.title);
-    $('.youtube-results').append(`<li><img src='${responseJson.items[i].snippet.thumbnails.medium.url}'><br><a href='http://www.youtube.com/watch?v=${responseJson.items[i].id.videoId}' target="_blank">${responseJson.items[i].snippet.title}</a></li>`);
+    $('.youtube-results').append(`<li><img class=
+    "results-img" src='${responseJson.items[i].snippet.thumbnails.medium.url}'><br><a href='http://www.youtube.com/watch?v=${responseJson.items[i].id.videoId}' target="_blank">${responseJson.items[i].snippet.title}</a></li>`);
     }
     $("#more-youtube-results").click(event => {
         getMoreYouTubeResults(responseJson);
