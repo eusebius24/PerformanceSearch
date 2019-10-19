@@ -5,6 +5,7 @@ var discogsSecret = "HmuMYvJaeMDCZgRgZKtiultyUClxXtCH"
 var pageNumber = 1;
 
 function watchForm() {
+    //Event listener for the main search box.  Obtains search term and calls the YouTube and Discogs search functions on it
     $('form').submit(event => {
         event.preventDefault();
         $('.youtube-results').empty();
@@ -12,10 +13,6 @@ function watchForm() {
         console.log('you clicked the search button!');
         var searchTerm = $('#searchTerm').val();
         console.log(searchTerm);
-        // var searchWords = [];
-        // searchWords = searchTerm.split(' ');
-        // var regexFromSearchWords = new RegExp(searchWords.join("|", "gi"));
-        // console.log(regexFromSearchWords);
         getYouTubeSearchResults(searchTerm);
         getDiscogSearchResults(searchTerm);   
         $('#clearSearch').on('click', function() {
@@ -26,6 +23,7 @@ function watchForm() {
 }
 
 function getYouTubeSearchResults(term) {
+//Searches YouTube and calls the display function to format the results
     var termArray = term.split(' ');
     var newTerm = termArray.join('%20');
     var url = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=10&q='" + newTerm + "'&key=" + youtubeAPIKey;
@@ -37,7 +35,6 @@ function getYouTubeSearchResults(term) {
         }
         throw new Error(response.statusText);
         })
-        // .then(responseJson => console.log(responseJson))
         .then(responseJson => displayYouTubeResults(responseJson))
        
    
@@ -50,6 +47,7 @@ function getYouTubeSearchResults(term) {
 }
 
 function displayYouTubeResults(responseJson) {
+    //Formats and displays search results
     for (var i in responseJson.items) {
     console.log(responseJson.items[i].snippet.title);
     $('.youtube-results').append(`<li><img class=
@@ -61,7 +59,7 @@ function displayYouTubeResults(responseJson) {
 }
 
 function getMoreYouTubeResults(responseJson) {
-        
+    //Adds new results to the bottom of the results list
     console.log(responseJson.nextPageToken);
     var searchTerm = $('#searchTerm').val();
     var termArray = searchTerm.split(' ');
@@ -84,6 +82,7 @@ function getMoreYouTubeResults(responseJson) {
 }
 
 function getDiscogSearchResults(term) {
+//Searches Discogs and calls the display function to format the results
     var termArray = term.split(' ');
     var newTerm = termArray.join('%20');
     var url = "https://cors-anywhere.herokuapp.com/https://api.discogs.com/database/search?q='" + newTerm + "'&key=" + discogsKey + "&secret=" + discogsSecret + "&perpage=100";
@@ -106,6 +105,7 @@ function getDiscogSearchResults(term) {
 }
 
 function displayDiscogsResults(responseJson) {
+     //Formats and displays search results
     for (var i in responseJson.results) {
         console.log(responseJson.results[i].title);
         $('.discogs-results').append(`<li><img src='${responseJson.results[i].thumb}'><br><a href='https://www.discogs.com/${responseJson.results[i].uri}' target='_blank'>${responseJson.results[i].title}</a></li>`);
@@ -116,6 +116,7 @@ function displayDiscogsResults(responseJson) {
 }
 
 function getMoreDiscogsResults(responseJson) {
+    //Adds new results to the bottom of the results list
     pageNumber++;
     
     var searchTerm = $('#searchTerm').val();
@@ -130,15 +131,13 @@ function getMoreDiscogsResults(responseJson) {
         }
         throw new Error(response.statusText);
         })
-        // .then(responseJson => console.log(responseJson))
-        
         .then(responseJson => displayDiscogsResults(responseJson))
         .catch(err => {
         $('#js-error-message').text(`Something went wrong: no more results for this search`);
         })
 
 }
-
+//JQuery UI function to invoke the tabs widget
 $( function() {
     $( "#tabs" ).tabs();
   } );

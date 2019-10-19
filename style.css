@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display);
+
+
+
 body {
     font-family: Montserrat, sans-serif;
     line-height: 1.2em;
@@ -25,7 +29,6 @@ main {
 form {
     width: 60%;
     margin: 0 auto;
-    /* padding-top: 60px; */
 }
 
 #searchTerm {
@@ -67,21 +70,24 @@ header {
     background-color: #A50321;
     color: #F2EFD8;
     padding: 60px;
-    padding-left: 100px;
+    padding-left: 80px;
     padding-bottom: 40px;
+    padding-right: 60px;
     width: 110%;
-    margin-left: -20px;
-    /* padding-left: 50px; */
+    margin-left: -50px;
     margin-top: -20px;
 }
 h1 {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 1.4rem;
+    font-weight: 900;
+    font-style: italic;
    
 }
 h2, h3 {
     font-family: 'Playfair Display', Georgia, serif;
     color: #A50321;
+    font-weight: 900;
 }
 .hidden {
     display: none;
@@ -110,9 +116,7 @@ h2, h3 {
     margin: 0 auto;
 }
 @media screen and (min-width: 400px) {
-    main {
-        /* margin-left: 100px; */
-    }
+   
     form {
         width: 50%;
         margin: 0 auto;
@@ -129,7 +133,6 @@ h2, h3 {
 
     #main {
         width: 80%;
-        /* margin-left: 200px; */
     }
 
     .buttons {
@@ -161,105 +164,8 @@ h2, h3 {
     .buttons {
         margin-left:-20px;
     }
-}
 
-
-
-/* @media screen and (max-width: 1115px) {
-    #search, #clearSearch {
-        width: 120px;
-        height: 40px;
-        font-size: 12px;
-    }
-
-    
-@media screen and (max-width: 915px) {
-
-    #searchTerm {
-        margin-bottom: 10px;
-        margin-top: 30px;
-        margin-left: -50px;
-    }
-    #search, #clearSearch {
-        width: 100px;
-        
-        font-size: 10px;
-    }
-
-    .YouTube {
-        width: 90%;
-        margin: 0 auto;
-
-    }
-
-
-    .discogs {
-        width: 90%;
-        margin: 0 auto;
-       
-    }
-    .youtube-results, .discogs-results {
-        list-style-type: none;
-        margin-left: -70px;
-        text-align: left;
-    }  
-} */
-
-/* @media screen and (max-width: 800px) and (min-width: 600px) {
-    
-    #searchTerm {
-        margin: 0 auto;
-        margin-left: 50px;
-        margin-bottom: 10px;
-        margin-top: 40px;
-    }
-
-    .ui-widget {
-        margin-top: 40px;
-    }
-    
-    #search {
-        margin-left: 50px;
+    .header {
+        padding-right: 200px;
     }
 }
-
-@media screen and (max-width: 600px) {
-    #search, #clearSearch {
-        width: 10px;
-        height: 10px;
-        font-size: 6px;
-        margin-left: 50px;
-    }
-    #formwrapper {
-        padding-left: 300px;
-    }
-    #searchTerm {
-        margin-left: -50px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    form {
-       padding-top: -60px;
-    }
-
-   #searchTerm {
-       margin-left: -300px;
-   }
-
-   #search, #clearSearch {
-       
-       width: 60px;
-       height: 20px;
-   }
-#search {
-    margin-left: -150px;
-   
-}
-#clearSearch {
-    margin-left: -200px;
-}
-    .ui-widget {
-        margin-top: 100px;
-    }
-} */
