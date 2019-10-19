@@ -1,8 +1,8 @@
 'use strict';
-var youtubeAPIKey = "AIzaSyCnMqbxOJ-VSoYFLFJNu3Wf_jAxNQXfszA";
-var discogsKey = "oNASBTCCcfjmebWyGlCQ";
-var discogsSecret = "HmuMYvJaeMDCZgRgZKtiultyUClxXtCH"
-var pageNumber = 1;
+const youtubeAPIKey = "AIzaSyCnMqbxOJ-VSoYFLFJNu3Wf_jAxNQXfszA";
+const discogsKey = "oNASBTCCcfjmebWyGlCQ";
+const discogsSecret = "HmuMYvJaeMDCZgRgZKtiultyUClxXtCH"
+const pageNumber = 1;
 
 function watchForm() {
     //Event listener for the main search box.  Obtains search term and calls the YouTube and Discogs search functions on it
