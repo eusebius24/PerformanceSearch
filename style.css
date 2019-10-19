@@ -6,18 +6,20 @@ body {
     font-family: Montserrat, sans-serif;
     line-height: 1.2em;
     background-color: #BCBF80;
+    font-size: 14px;
 }
 
 main {
     width: 75%;
     height: 5000vh;
     margin: 0 auto;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     background-color:#F2EFD8;
 }
 
 #formwrapper {
     height: 150px;
+    margin: 0 auto;
 }
 
 form {
@@ -28,15 +30,16 @@ form {
 
 #searchTerm {
     height: 30px;
-    width: 250px;
+    width: 200px;
     border-radius: 5px;
-    margin-left: -45px;
+    margin-left: -30px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .buttons {
     margin-bottom: 40px;
+    margin-left: -20px;
 }
 
 #search, #clearSearch, #more-youtube-results, #more-discogs-results {
@@ -46,7 +49,7 @@ form {
     color: #fff;
     border-radius: 5%;
     font-size: 12px;
-    margin: 0 quto;
+    margin: 0 auto;
     margin-bottom: 20px;
     font-family: Montserrat, sans-serif;
 }
@@ -64,6 +67,7 @@ header {
     background-color: #A50321;
     color: #F2EFD8;
     padding: 60px;
+    padding-left: 100px;
     padding-bottom: 40px;
     width: 110%;
     margin-left: -20px;
@@ -107,16 +111,60 @@ h2, h3 {
 }
 @media screen and (min-width: 400px) {
     main {
-        margin-left: 50px;
+        /* margin-left: 100px; */
     }
     form {
-        width: 70%;
-        margin-left: 70px;
+        width: 50%;
+        margin: 0 auto;
     }
     #searchTerm {
         margin-left: -25px;
     }
+
 }
+@media screen and (min-width: 600px) {
+    #searchTerm{
+        margin-left: 40px;
+    }
+
+    #main {
+        width: 80%;
+        /* margin-left: 200px; */
+    }
+
+    .buttons {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+   
+    body {
+        font-size: 24px;
+    }
+
+    header {
+        padding-left: 15%;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2, h3 {
+        font-size: 2rem;
+    }
+
+    #search, #clearSearch {
+        font-size: 12px;
+    }
+
+    .buttons {
+        margin-left:-20px;
+    }
+}
+
+
+
 /* @media screen and (max-width: 1115px) {
     #search, #clearSearch {
         width: 120px;
