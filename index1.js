@@ -6,7 +6,7 @@ var pageNumber = 1;
 
 function watchForm() {
     //Event listener for the main search box.  Obtains search term and calls the YouTube and Discogs search functions on it
-    $('form').submit(event => {
+    $('form").submit(event => {
         event.preventDefault();
         $('.youtube-results').empty();
         $('.discogs-results').empty();
