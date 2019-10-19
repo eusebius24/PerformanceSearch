@@ -88,6 +88,7 @@ h2, h3 {
     font-family: 'Playfair Display', Georgia, serif;
     color: #A50321;
     font-weight: 900;
+    font-style: italic;
 }
 .hidden {
     display: none;
