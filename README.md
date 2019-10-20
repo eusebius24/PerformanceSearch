@@ -1,5 +1,7 @@
 # PerformanceSearch
 API Hack Capstone for bloc.io module 11
+
+[Link to live app](https://eusebius24.github.io/PerformanceSearch/)
 ## Purpose
 This app is targeted towards musicians who want to hear a performance of a piece they're working on.  It searches YouTube for performance videos and, simultaneously, Discogs for physical recordings (vinyl, CD, cassette).
 ## Screenshots
